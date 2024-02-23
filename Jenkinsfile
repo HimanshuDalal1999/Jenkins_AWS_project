@@ -5,13 +5,13 @@ pipeline {
     
         stage('Making Infrastrucuture up') {
             steps {
-                sh "docker-compose up -d hub chrome firefox"
+                sh "sudo docker-compose up -d hub chrome firefox"
             }
         }
         
          stage('Running Test Cases') {
             steps {
-                sh "mvn -Dmaven.test.failure.ignore=true test"
+                sh "sudo mvn -Dmaven.test.failure.ignore=true test"
             }
         
             post {
@@ -34,7 +34,7 @@ Automation Team - ATT 19-August <h3>(Himanshu)</h3>''', subject: '$PROJECT_NAME 
    	 	
    	 	stage('Making Infrastructure down') {
             steps {
-                sh "docker-compose down"	
+                sh "sudo docker-compose down"	
             }
         }
    	 
