@@ -36,9 +36,8 @@ Automation Team - ATT 19-August <h3>(Himanshu)</h3>''', subject: '$PROJECT_NAME 
             steps {
                 sh "docker-compose down"	
             }
-        }
-   	 
-       }
+       	 }
+   	  }
   }
 
 
